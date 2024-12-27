@@ -38,13 +38,7 @@ This project demonstrates a robust cyber security implementation using two disti
 - A polyalphabetic substitution cipher that uses the message itself as the key
 - Custom implementation for educational purposes and demonstration of classical cryptography
 
-## Project Structure
 
-- `/pages`: Next.js pages including the main application interface
-- `/components`: React components for UI elements
-- `/utils`: Utility functions including encryption algorithms
-- `/api`: Express.js API routes for handling backend operations
-- `/models`: MongoDB schemas for data structure
 
 ## Security Considerations
 
