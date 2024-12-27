@@ -148,7 +148,7 @@ const Page = () => {
           {error && <p className="text-red-500 mb-4">{error}</p>}
 
           <ul className="list-disc list-inside">
-            {data.map((item, index) => (
+          {data.map((item, index) => (
               <li key={index} className="text-gray-700">
                 {item.decryptedText}
               </li>

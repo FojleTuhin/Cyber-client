@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Cyber Security Project: Dual Encryption System
 
-## Getting Started
+## Project Overview
 
-First, run the development server:
+This project demonstrates a robust cyber security implementation using two distinct encryption algorithms: RSA (Rivest–Shamir–Adleman) for user authentication and Autokey Cipher for data storage and retrieval. The application provides a secure platform for user signup, login, and data management, showcasing practical applications of cryptographic techniques in web development.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Technologies Used
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Frontend**: Next.js (React framework)
+- **Backend**: Node.js with Express.js
+- **Database**: MongoDB
+- **Encryption**: RSA (for authentication) and Autokey Cipher (for data)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Key Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Secure User Authentication**
+   - Implements RSA encryption for signup and login processes
+   - Ensures password security during transmission and storage
 
-## Learn More
+2. **Encrypted Data Management**
+   - Uses Autokey Cipher for encrypting and decrypting user data
+   - Provides a secure method for storing and retrieving sensitive information
 
-To learn more about Next.js, take a look at the following resources:
+3. **Full-Stack Implementation**
+   - Utilizes Next.js for a responsive and efficient frontend
+   - Employs Node.js and Express for a robust backend API
+   - Integrates MongoDB for secure and scalable data storage
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Encryption Algorithms
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### RSA (Rivest–Shamir–Adleman)
+- Used for secure user authentication (signup and login)
+- Provides public-key cryptography, ensuring secure transmission of user credentials
+- Implemented using Node.js `crypto` module
 
-## Deploy on Vercel
+### Autokey Cipher
+- Employed for encrypting and decrypting user data
+- A polyalphabetic substitution cipher that uses the message itself as the key
+- Custom implementation for educational purposes and demonstration of classical cryptography
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Project Structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `/pages`: Next.js pages including the main application interface
+- `/components`: React components for UI elements
+- `/utils`: Utility functions including encryption algorithms
+- `/api`: Express.js API routes for handling backend operations
+- `/models`: MongoDB schemas for data structure
+
+## Security Considerations
+
+- RSA keys are generated on the client-side for each session
+- Passwords are never stored or transmitted in plain text
+- All data stored in the database is encrypted
+- Server-side validation is implemented to prevent injection attacks
+
+## Setup and Running the Project
+
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Set up MongoDB and update the connection string in the environment variables
+4. Run the development server: `npm run dev`
+5. Access the application at `http://localhost:3000`
+
+## Note
+
+This project is for educational purposes and demonstrates the implementation of cryptographic algorithms in a web application. For production use, consider using well-established libraries and consult with security experts.
